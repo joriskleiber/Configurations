@@ -1459,9 +1459,18 @@
 /**
  * Enable this option for a probe connected to the Z-MIN pin.
  * The probe replaces the Z-MIN endstop and is used for Z homing.
+ * You propably also want to enable HAS_PIN_27_BOARD if you are
+ * using an older BLTouch/3DTouch with the pinboard adapter connected to the LCD port.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+
+/**
+ * Use BLTouch via Pin 27 adapter (LCD port breakout board).
+ * Required for older BLTouch/3DTouch kits that use a breakout board.
+ */
+#define HAS_PIN_27_BOARD
+
 
 // Force the use of the probe for Z-axis homing
 #define USE_PROBE_FOR_Z_HOMING
